@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next --openssl-legacy-provider dev",
-    "build": "next --openssl-legacy-provider build",
-    "start": "next --openssl-legacy-provider start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "seeder": "node utils/seeder",
     "export": "next export"
@@ -21,6 +21,7 @@
     "cloudinary": "^1.27.0",
     "crypto": "^1.0.1",
     "easyinvoice": "^1.0.147",
+    "firebase": "^10.3.0",
     "framer-motion": "^4.1.17",
     "moment": "^2.29.1",
     "moment-range": "^4.0.2",
