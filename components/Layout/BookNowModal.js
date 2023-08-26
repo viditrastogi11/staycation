@@ -20,12 +20,12 @@ function BookNowModal({ isOpen, onClose, onSubmit, roomDetails, date, daysOfStay
   }));
 
   return (
-    <div className={`fixed inset-0 flex items-center justify-center ${isOpen ? 'visible' : 'hidden'}`}>
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-75"/>
+    <div className={`fixed inset-0 flex items-center justify-center ${isOpen ? 'visible' : 'hidden'} z-50`}>
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-75"  onClick={onClose}/>
     <div className="modal-content bg-white p-6 rounded-lg shadow-md relative flex flex-col md:flex-row">
       {/* Image and Info */}
       <div className="md:flex md:flex-col md:mr-4 justify-between">
-        {roomDetails && roomDetails.images[0] && <Image src={roomDetails.images[0].url} alt="Room"  className={`rounded-md ${roomDetails.images[0] ? 'hidden md:block' : 'hidden'}`} height="210px" width="200px"  />}
+        {roomDetails && roomDetails.images[0] && <img src={roomDetails.images[0].url} alt="Room"  className={`rounded-md ${roomDetails.images[0] ? 'hidden md:block' : 'hidden'}`} style={{height:"250px", width:"250px"}}  />}
         <div className="mt-4">
         
           <p className="text-lg font-semibold">Stay Details</p>
@@ -38,7 +38,7 @@ function BookNowModal({ isOpen, onClose, onSubmit, roomDetails, date, daysOfStay
         </div>
       </div>
       {/* Form */}
-      <form className="space-y-4 md:flex-1 mt-4 md:mt-0" onSubmit={handleSubmit}>
+      <form className="space-y-4 md:flex-1 mt-4 md:mt-0" style={{width:"250px"}} onSubmit={handleSubmit}>
         <h2 className="text-xl font-semibold mb-4">Book Now</h2>
         <div>
             <label htmlFor="room" className="block font-medium">Num. of Rooms</label>
@@ -46,7 +46,7 @@ function BookNowModal({ isOpen, onClose, onSubmit, roomDetails, date, daysOfStay
               id="room"
               value={selectedRoom}
               onChange={(e) => setSelectedRoom(e.target.value)}
-              className="w-full border rounded-md px-3 py-2"
+              className="w-full border rounded-md px-3 py-2 h-10"
             >
               
               {roomOptions.map((option) => (
