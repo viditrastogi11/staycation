@@ -221,7 +221,7 @@ export const RoomDetails = ({ error, details }) => {
                   onSubmit={handleFormSubmit}
                   roomDetails={details} 
                   date={date}
-                  daysOfStay={daysOfStay}
+                  daysOfStay={daysOfStay===0?1:daysOfStay}
                   user={user} />
                 </>
                

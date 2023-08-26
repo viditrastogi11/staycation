@@ -25,7 +25,7 @@ function BookNowModal({ isOpen, onClose, onSubmit, roomDetails, date, daysOfStay
     <div className="modal-content bg-white p-6 rounded-lg shadow-md relative flex flex-col md:flex-row">
       {/* Image and Info */}
       <div className="md:flex md:flex-col md:mr-4 justify-between">
-        {roomDetails && roomDetails.images[0] && <Image src={roomDetails.images[0].url} alt="Room" style={{ height: '200px' }} className={`rounded-md ${roomDetails.images[0] ? 'hidden md:block' : 'hidden'}`} />}
+        {roomDetails && roomDetails.images[0] && <Image src={roomDetails.images[0].url} alt="Room"  className={`rounded-md ${roomDetails.images[0] ? 'hidden md:block' : 'hidden'}`} height="210px" width="200px"  />}
         <div className="mt-4">
         
           <p className="text-lg font-semibold">Stay Details</p>
